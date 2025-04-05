@@ -220,13 +220,13 @@
     "interval": 120000,
     "title": "热门股票"
   },
-  "yahoo-finance": {
+  "yahoofinance": {
+    "title": "市场新闻",
     "name": "Yahoo Finance",
     "column": "finance",
     "home": "https://finance.yahoo.com/",
     "color": "purple",
-    "interval": 900000,
-    "title": "市场新闻"
+    "interval": 900000
   },
   "gelonghui": {
     "title": "事件",
