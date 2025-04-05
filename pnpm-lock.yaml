@@ -220,6 +220,9 @@ importers:
       typescript-eslint:
         specifier: ^8.25.0
         version: 8.29.0(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3)
+      unenv:
+        specifier: ^1.10.0
+        version: 1.10.0
       unimport:
         specifier: ^4.1.2
         version: 4.1.3
@@ -5806,6 +5809,9 @@ packages:
   undici@6.21.2:
     resolution: {integrity: sha512-uROZWze0R0itiAKVPsYhFov9LxrPMHLMEQFszeI2gCN6bnIIZ8twzBCJcN2LJrBBLfrP0t1FW0g+JmKVl8Vk1g==}
     engines: {node: '>=18.17'}
+
+  unenv@1.10.0:
+    resolution: {integrity: sha512-wY5bskBQFL9n3Eca5XnhH6KbUo/tfvkwm9OpcdCvLaeA7piBNbavbOKJySEwQ1V0RH6HvNlSAFRTpvTqgKRQXQ==}
 
   unenv@2.0.0-rc.14:
     resolution: {integrity: sha512-od496pShMen7nOy5VmVJCnq8rptd45vh6Nx/r2iPbrba6pa6p+tS2ywuIHRZ/OBvSbQZB0kWvpO9XBNVFXHD3Q==}
@@ -12376,6 +12382,14 @@ snapshots:
       '@fastify/busboy': 2.1.1
 
   undici@6.21.2: {}
+
+  unenv@1.10.0:
+    dependencies:
+      consola: 3.4.2
+      defu: 6.1.4
+      mime: 3.0.0
+      node-fetch-native: 1.6.6
+      pathe: 1.1.2
 
   unenv@2.0.0-rc.14:
     dependencies:
