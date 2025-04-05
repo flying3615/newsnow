@@ -1,10 +1,10 @@
 import process from "node:process"
 import { join } from "node:path"
-import viteNitro from "vite-plugin-with-nitro"
+// import viteNitro from "vite-plugin-with-nitro" // Remove this import
 import { RollopGlob } from "./tools/rollup-glob"
 import { projectDir } from "./shared/dir"
 
-const nitroOption: Parameters<typeof viteNitro>[0] = {
+const nitroOption = { // Remove the type annotation
   experimental: {
     database: true,
   },
@@ -30,7 +30,7 @@ const nitroOption: Parameters<typeof viteNitro>[0] = {
 if (process.env.VERCEL) {
   nitroOption.preset = "vercel-edge"
   // You can use other online database, do it yourself. For more info: https://db0.unjs.io/connectors
-  nitroOption.database = undefined
+  // nitroOption.database = undefined // Remove this line, let Nitro handle default if needed for Vercel
   // nitroOption.vercel = {
   //   config: {
   //     cache: []
@@ -41,9 +41,8 @@ if (process.env.VERCEL) {
   nitroOption.database = {
     default: {
       connector: "cloudflare-d1",
-      options: {
-        bindingName: "NEWSNOW_DB",
-      },
+      // Options like bindingName might be top-level now for D1 connector
+      bindingName: "NEWSNOW_DB",
     },
   }
 } else if (process.env.BUN) {
@@ -55,6 +54,4 @@ if (process.env.VERCEL) {
   }
 }
 
-export default function () {
-  return viteNitro(nitroOption)
-}
+export default nitroOption // Export the config object directly
