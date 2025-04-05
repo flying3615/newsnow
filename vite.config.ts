@@ -5,7 +5,7 @@ import { TanStackRouterVite } from "@tanstack/router-plugin/vite"
 import unocss from "unocss/vite"
 import unimport from "unimport/unplugin"
 import dotenv from "dotenv"
-import nitro from "./nitro.config"
+import nitro from "./nitro.config" // Revert back to original import
 import { projectDir } from "./shared/dir"
 import pwa from "./pwa.config"
 
